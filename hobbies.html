@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies - Creative Pursuits</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nitinshan Fredrick</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="study.html" class="nav-link">Study</a>
+                <a href="hobbies.html" class="nav-link active">Hobbies</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">My Hobbies & Interests</h1>
+            <p class="page-subtitle">Exploring creativity and passion outside of work</p>
+        </div>
+    </section>
+
+    <!-- Hobbies Overview -->
+    <section class="hobbies-overview">
+        <div class="container">
+            <div class="hobbies-grid">
+                <div class="hobby-card" onclick="showHobbyDetails('photography')">
+                    <div class="hobby-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Capturing moments and exploring the world through my lens</p>
+                    <div class="hobby-stats">
+                        <span><i class="fas fa-images"></i> 500+ Photos</span>
+                        <span><i class="fas fa-calendar"></i> 3 Years</span>
+                    </div>
+                </div>
+
+                <div class="hobby-card" onclick="showHobbyDetails('music')">
+                    <div class="hobby-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music Production</h3>
+                    <p>Creating beats and melodies in my home studio</p>
+                    <div class="hobby-stats">
+                        <span><i class="fas fa-headphones"></i> 25 Tracks</span>
+                        <span><i class="fas fa-calendar"></i> 2 Years</span>
+                    </div>
+                </div>
+
+                <div class="hobby-card" onclick="showHobbyDetails('fitness')">
+                    <div class="hobby-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Fitness & Health</h3>
+                    <p>Maintaining physical and mental well-being through exercise</p>
+                    <div class="hobby-stats">
+                        <span><i class="fas fa-fire"></i> 300+ Workouts</span>
+                        <span><i class="fas fa-calendar"></i> 4 Years</span>
+                    </div>
+                </div>
+
+                <div class="hobby-card" onclick="showHobbyDetails('gaming')">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Gaming</h3>
+                    <p>Exploring virtual worlds and competitive gaming</p>
+                    <div class="hobby-stats">
+                        <span><i class="fas fa-trophy"></i> 50+ Games</span>
+                        <span><i class="fas fa-calendar"></i> 5+ Years</span>
+                    </div>
+                </div>
+
+                <div class="hobby-card" onclick="showHobbyDetails('cooking')">
+                    <div class="hobby-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Cooking</h3>
+                    <p>Experimenting with flavors and international cuisines</p>
+                    <div class="hobby-stats">
+                        <span><i class="fas fa-pepper-hot"></i> 100+ Recipes</span>
+                        <span><i class="fas fa-calendar"></i> 2 Years</span>
+                    </div>
+                </div>
+
+                <div class="hobby-card" onclick="showHobbyDetails('travel')">
+                    <div class="hobby-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Travel</h3>
+                    <p>Exploring new cultures and destinations around the world</p>
+                    <div class="hobby-stats">
+                        <span><i class="fas fa-map-marker-alt"></i> 12 Countries</span>
+                        <span><i class="fas fa-calendar"></i> Ongoing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobby Details Section -->
+    <section id="hobbyDetails" class="hobby-details" style="display: none;">
+        <div class="container">
+            <div class="detail-content">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Gallery -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 class="section-title">Photography Gallery</h2>
+            <p class="section-subtitle">Some of my favorite captures</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('photo1')">
+                    <div class="image-placeholder landscape">
+                        <i class="fas fa-mountain"></i>
+                        <span>Landscape</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('photo2')">
+                    <div class="image-placeholder portrait">
+                        <i class="fas fa-user"></i>
+                        <span>Portrait</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('photo3')">
+                    <div class="image-placeholder street">
+                        <i class="fas fa-city"></i>
+                        <span>Street</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('photo4')">
+                    <div class="image-placeholder nature">
+                        <i class="fas fa-leaf"></i>
+                        <span>Nature</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('photo5')">
+                    <div class="image-placeholder architecture">
+                        <i class="fas fa-building"></i>
+                        <span>Architecture</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('photo6')">
+                    <div class="image-placeholder macro">
+                        <i class="fas fa-search"></i>
+                        <span>Macro</span>
+                    </div>
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music-section">
+        <div class="container">
+            <h2 class="section-title">Music Creations</h2>
+            <p class="section-subtitle">Original tracks and remixes</p>
+            <div class="music-grid">
+                <div class="track-card">
+                    <div class="track-cover">
+                        <i class="fas fa-music"></i>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3>Midnight Dreams</h3>
+                        <p>Ambient Electronic</p>
+                        <div class="track-duration">3:45</div>
+                    </div>
+                </div>
+                <div class="track-card">
+                    <div class="track-cover">
+                        <i class="fas fa-music"></i>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3>Urban Beats</h3>
+                        <p>Hip-Hop Instrumental</p>
+                        <div class="track-duration">2:58</div>
+                    </div>
+                </div>
+                <div class="track-card">
+                    <div class="track-cover">
+                        <i class="fas fa-music"></i>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3>Ocean Waves</h3>
+                        <p>Relaxing Soundscape</p>
+                        <div class="track-duration">5:12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Tracker -->
+    <section class="fitness-section">
+        <div class="container">
+            <h2 class="section-title">Fitness Journey</h2>
+            <div class="fitness-stats">
+                <div class="fitness-stat">
+                    <div class="stat-circle">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" style="stroke-dasharray: 314.16; stroke-dashoffset: 125.66;"/>
+                        </svg>
+                        <div class="stat-text">
+                            <span class="stat-value">60%</span>
+                            <span class="stat-label">Weekly Goal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fitness-achievements">
+                    <h3>Recent Achievements</h3>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <i class="fas fa-medal"></i>
+                            <span>Completed 30-day challenge</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-fire"></i>
+                            <span>10 consecutive workout days</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Personal best: 5K run</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="lightbox-caption">
+                <h3>Photo Title</h3>
+                <p>Photo description and details</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Nitinshan Fredrick. All rights reserved. Built with ❤️</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
