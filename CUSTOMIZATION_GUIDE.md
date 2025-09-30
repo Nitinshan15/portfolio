@@ -21,7 +21,7 @@ I can see your CV document (`NitinshanFredrick_CV.pdf`) and have already updated
 **To Update:** 
 1. **Professional Card:** Add your specific role/expertise
 2. **Learner Card:** Add your educational background  
-3. **Creative Card:** Add your actual interests/hobbies
+3. **Creative Card:** Add your actual interests and projects
 
 **Location:** Lines ~80-110
 
@@ -81,12 +81,6 @@ I can see your CV document (`NitinshanFredrick_CV.pdf`) and have already updated
 **To Update:** Add your real certifications from CV
 **Location:** Lines ~310-350
 
-## 🎨 HOBBIES PAGE (hobbies.html)
-
-### Hobby Cards
-**To Update:** Replace with your actual hobbies and interests
-**Location:** Lines ~50-150 and JavaScript function `getHobbyData()`
-
 ## 📝 Quick Customization Steps
 
 ### Step 1: Extract Information from Your CV
@@ -96,7 +90,6 @@ Open your CV and note down:
 - [ ] Technical skills and proficiency levels
 - [ ] Education and certifications
 - [ ] Contact information
-- [ ] Hobbies and interests
 
 ### Step 2: Update Contact Information
 1. Open `index.html`
@@ -139,10 +132,8 @@ Replace sample numbers with your actual metrics:
 - `index.html` - Contact info, bio, statistics
 - `work.html` - Skills section, project descriptions
 - `study.html` - Education, courses, certifications
-- `hobbies.html` - Personal interests
-
 ### JavaScript File (Data Updates)
-- `js/main.js` - Project data, hobby data, statistics
+- `js/main.js` - Project data, statistics
 
 ### CSS File (Style Customization)
 - `css/style.css` - Colors, fonts, layout (optional)

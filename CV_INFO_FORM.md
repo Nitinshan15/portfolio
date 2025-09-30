@@ -82,24 +82,6 @@
 - Technologies Learned: [Number]
 - Certifications Earned: [Number]
 
-## Hobbies & Interests
-**Hobby 1:** [Name]
-- Experience: [Years]
-- Description: [What you love about it]
-- Achievements: [Any notable achievements]
-
-**Hobby 2:** [Name]
-- Experience: [Years]
-- Description: [What you love about it]
-- Achievements: [Any notable achievements]
-
-**Hobby 3:** [Name]
-- Experience: [Years]
-- Description: [What you love about it]
-- Achievements: [Any notable achievements]
-
-[Add more hobbies as needed]
-
 ## Social Media Links
 - LinkedIn: [URL]
 - GitHub: [URL]

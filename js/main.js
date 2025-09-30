@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectFilters();
     initModals();
     initLightbox();
-    initHobbyDetails();
     initMobileMenu();
 });
 
@@ -103,7 +102,7 @@ function initScrollAnimations() {
     animatedElements.forEach(el => observer.observe(el));
     
     // Add animation classes to elements
-    const cards = document.querySelectorAll('.about-card, .project-card, .course-card, .hobby-card');
+    const cards = document.querySelectorAll('.about-card, .project-card, .course-card');
     cards.forEach((card, index) => {
         card.classList.add('fade-in');
         card.style.animationDelay = `${index * 0.1}s`;
@@ -471,149 +470,6 @@ function getPhotoData(photoId) {
     return photos[photoId] || photos.photo1;
 }
 
-// Hobby details functionality
-function initHobbyDetails() {
-    // This function would be expanded to show detailed hobby information
-}
-
-function showHobbyDetails(hobbyId) {
-    const hobbyDetails = document.getElementById('hobbyDetails');
-    const detailContent = hobbyDetails.querySelector('.detail-content');
-    
-    const hobbyData = getHobbyData(hobbyId);
-    
-    detailContent.innerHTML = `
-        <div class="hobby-detail">
-            <div class="hobby-detail-header">
-                <div class="hobby-icon-large">
-                    <i class="${hobbyData.icon}"></i>
-                </div>
-                <h2>${hobbyData.title}</h2>
-                <p>${hobbyData.description}</p>
-            </div>
-            <div class="hobby-stats-detail">
-                <div class="stat-item">
-                    <span class="stat-value">${hobbyData.experience}</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">${hobbyData.projects}</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">${hobbyData.level}</span>
-                    <span class="stat-label">Skill Level</span>
-                </div>
-            </div>
-            <div class="hobby-content">
-                <h3>What I Love About ${hobbyData.title}</h3>
-                <ul>
-                    ${hobbyData.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
-                </ul>
-            </div>
-        </div>
-    `;
-    
-    hobbyDetails.style.display = 'block';
-    hobbyDetails.scrollIntoView({ behavior: 'smooth' });
-    
-    // Auto-hide after 10 seconds
-    setTimeout(() => {
-        hobbyDetails.style.display = 'none';
-    }, 10000);
-}
-
-function getHobbyData(hobbyId) {
-    const hobbies = {
-        photography: {
-            title: 'Photography',
-            description: 'Capturing moments and exploring the world through my lens.',
-            icon: 'fas fa-camera',
-            experience: '3',
-            projects: '500+',
-            level: 'Advanced',
-            highlights: [
-                'Love experimenting with natural light and golden hour shots',
-                'Enjoy exploring different photography styles from portraits to landscapes',
-                'Always learning new techniques and editing skills',
-                'Finding beauty in everyday moments and unique perspectives'
-            ]
-        },
-        music: {
-            title: 'Music Production',
-            description: 'Creating beats and melodies in my home studio.',
-            icon: 'fas fa-music',
-            experience: '2',
-            projects: '25',
-            level: 'Intermediate',
-            highlights: [
-                'Experimenting with electronic music and ambient soundscapes',
-                'Learning different DAWs and production techniques',
-                'Collaborating with other musicians and artists',
-                'Finding inspiration in various genres and cultures'
-            ]
-        },
-        fitness: {
-            title: 'Fitness & Health',
-            description: 'Maintaining physical and mental well-being through exercise.',
-            icon: 'fas fa-dumbbell',
-            experience: '4',
-            projects: '300+',
-            level: 'Advanced',
-            highlights: [
-                'Consistent workout routine with variety in exercises',
-                'Focus on both strength training and cardiovascular health',
-                'Tracking progress and setting new fitness goals',
-                'Enjoying the mental benefits and stress relief from exercise'
-            ]
-        },
-        gaming: {
-            title: 'Gaming',
-            description: 'Exploring virtual worlds and competitive gaming.',
-            icon: 'fas fa-gamepad',
-            experience: '5+',
-            projects: '50+',
-            level: 'Expert',
-            highlights: [
-                'Passionate about both single-player narratives and multiplayer competition',
-                'Enjoy discovering indie games and supporting small developers',
-                'Part of gaming communities and online tournaments',
-                'Appreciate games as an art form and storytelling medium'
-            ]
-        },
-        cooking: {
-            title: 'Cooking',
-            description: 'Experimenting with flavors and international cuisines.',
-            icon: 'fas fa-utensils',
-            experience: '2',
-            projects: '100+',
-            level: 'Intermediate',
-            highlights: [
-                'Love trying recipes from different cultures and regions',
-                'Experimenting with fusion cuisine and creative presentations',
-                'Growing herbs and using fresh ingredients',
-                'Hosting dinner parties and sharing meals with friends'
-            ]
-        },
-        travel: {
-            title: 'Travel',
-            description: 'Exploring new cultures and destinations around the world.',
-            icon: 'fas fa-plane',
-            experience: 'Ongoing',
-            projects: '12',
-            level: 'Experienced',
-            highlights: [
-                'Immersing in local cultures and learning from different perspectives',
-                'Documenting journeys through photography and journaling',
-                'Planning unique itineraries off the beaten path',
-                'Building connections with people from all walks of life'
-            ]
-        }
-    };
-    
-    return hobbies[hobbyId] || hobbies.photography;
-}
-
 // Utility functions
 function debounce(func, wait) {
     let timeout;
@@ -685,4 +541,3 @@ window.openProjectModal = openProjectModal;
 window.closeProjectModal = closeProjectModal;
 window.openLightbox = openLightbox;
 window.closeLightbox = closeLightbox;
-window.showHobbyDetails = showHobbyDetails;

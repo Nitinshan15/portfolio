@@ -1132,57 +1132,6 @@ body {
     border-bottom: none;
 }
 
-/* Hobbies Styles */
-.hobbies-overview {
-    padding: 5rem 0;
-    background: var(--bg-light);
-}
-
-.hobbies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.hobby-card {
-    background: white;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
-    text-align: center;
-    cursor: pointer;
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-}
-
-.hobby-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--primary-color);
-}
-
-.hobby-icon {
-    width: 4rem;
-    height: 4rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-size: 1.5rem;
-    color: white;
-}
-
-.hobby-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    color: var(--text-gray);
-}
-
 /* Photo Gallery */
 .photo-gallery {
     padding: 5rem 0;
