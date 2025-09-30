@@ -18,7 +18,6 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="work.html" class="nav-link">Work</a>
                 <a href="study.html" class="nav-link">Study</a>
-                <a href="hobbies.html" class="nav-link">Hobbies</a>
                 <a href="achievements.html" class="nav-link active">Achievements</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -31,15 +30,10 @@
     </nav>
 
     <!-- Achievements Header -->
-    <section class="achievements-header">
+    <section class="page-header">
         <div class="container">
-            <div class="section-header">
-                <h1 class="section-title">My Achievements & Badges</h1>
-                <p class="section-description">
-                    A collection of awards, recognitions, digital badges, and certifications that highlight my journey in technology, 
-                    engineering excellence, and professional growth.
-                </p>
-            </div>
+            <h1 class="page-title">My Achievements & Badges</h1>
+            <p class="page-subtitle">A collection of awards, recognitions, digital badges, and certifications that highlight my journey in technology, engineering excellence, and professional growth.</p>
         </div>
     </section>
 
@@ -229,8 +223,12 @@
                 <!-- CamberRacing Section -->
                 <div>
                     <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                        <h3 style="font-size: 2.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: 1rem;">CamberRacing Team</h3>
-                        <p style="font-size: 1.1rem; color: var(--text-gray); max-width: 600px; margin: 0 auto;">Extracurricular achievements and team participation in automotive engineering projects and competitions.</p>
+                        <h3 style="font-size: 2.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: 1rem;">CAMBER RACING - SRM University</h3>
+                        <div style="font-size: 1.1rem; color: var(--text-gray); max-width: 800px; margin: 0 auto; text-align: left;">
+                            <p style="margin-bottom: 1rem;">• <strong>Formula Bharat 2022:</strong> Achieved Runner-Up at Formula Bharat 2022, showcasing expertise in vehicle engineering and effective teamwork, contributing to the team's success in this highly competitive event.</p>
+                            <p style="margin-bottom: 1rem;">• <strong>Manufacturing Lead:</strong> Spearheaded manufacturing strategies and manufactured and fabricated components for the Formula Student Car.</p>
+                            <p style="margin-bottom: 0;">• <strong>Chassis Lead:</strong> Fabricated lightweight robust chassis systems by considering aspects of longitudinal, lateral and vertical dynamics of the race car. Additionally designed and programmed electronic systems for sensing of steering angle, suspensions travel and wheel speed.</p>
+                        </div>
                     </div>
                     <div class="awards-scroll-container">
                         <div class="awards-horizontal-scroll">
@@ -242,6 +240,18 @@
                             </div>
                             <div class="award-item">
                                 <img src="images/SRM/CamberRacing/CamberRacing3.jpg" alt="CamberRacing Project 3" loading="lazy" onclick="openCamberImageModal(this)">
+                            </div>
+                            <div class="award-item">
+                                <img src="images/SRM/CamberRacing/IMG_0175.JPG" alt="CamberRacing Team Building" loading="lazy" onclick="openCamberImageModal(this)">
+                            </div>
+                            <div class="award-item">
+                                <img src="images/SRM/CamberRacing/IMG_1627.JPG" alt="CamberRacing Workshop" loading="lazy" onclick="openCamberImageModal(this)">
+                            </div>
+                            <div class="award-item">
+                                <img src="images/SRM/CamberRacing/IMG_1933.jpg" alt="CamberRacing Vehicle Testing" loading="lazy" onclick="openCamberImageModal(this)">
+                            </div>
+                            <div class="award-item">
+                                <img src="images/SRM/CamberRacing/JDT_0931.jpg" alt="CamberRacing Competition" loading="lazy" onclick="openCamberImageModal(this)">
                             </div>
                         </div>
                     </div>
@@ -385,8 +395,12 @@ Received a cash reward from the Center Head and Top Executives.
 The 4-month intensive training program covered C, C++, Microcontrollers, and Communication Protocols (CAN, SPI, UART, I2C), along with AUTOSAR and MISRA compliance.`
             },
             'CSR Appreciation.jpg': {
-                title: 'CSR Appreciation',
-                description: 'Recognized for my active participation in the department\'s Corporate Social Responsibility (CSR) program.'
+                title: 'CSR Appreciation Certificate',
+                description: `Received appreciation from Bosch Global Software Technologies for outstanding contribution to Corporate Social Responsibility (CSR) initiatives.
+
+Actively participated in community development programs and environmental sustainability projects as part of the company's commitment to social responsibility.
+
+This recognition acknowledges my dedication to making a positive impact beyond professional responsibilities, contributing to society and the community at large.`
             },
             'FITKOVAI.jpg': {
                 title: 'FITKOVAI',
@@ -408,7 +422,11 @@ The 4-month intensive training program covered C, C++, Microcontrollers, and Com
         const camberImages = [
             'images/SRM/CamberRacing/CamberRacing1.jpg',
             'images/SRM/CamberRacing/CamberRacing2.jpg',
-            'images/SRM/CamberRacing/CamberRacing3.jpg'
+            'images/SRM/CamberRacing/CamberRacing3.jpg',
+            'images/SRM/CamberRacing/IMG_0175.JPG',
+            'images/SRM/CamberRacing/IMG_1627.JPG',
+            'images/SRM/CamberRacing/IMG_1933.jpg',
+            'images/SRM/CamberRacing/JDT_0931.jpg'
         ];
 
         function getCurrentImages() {
@@ -441,18 +459,35 @@ The 4-month intensive training program covered C, C++, Microcontrollers, and Com
             const modalText = document.getElementById('specialModalText');
             
             // Find the index of the clicked image
-            const imageName = imgElement.src.split('/').pop();
+            const imageName = decodeURIComponent(imgElement.src.split('/').pop());
             currentImageIndex = specialImages.findIndex(img => img.includes(imageName));
             currentImageSet = 'special';
             
+            // Debug logging
+            console.log('Clicked image name:', imageName);
+            console.log('Found index:', currentImageIndex);
+            console.log('Image set:', currentImageSet);
+            
             // Get image details
             const details = specialImageDetails[imageName];
+            console.log('Details found:', details);
             
             modal.style.display = 'flex';
+            
+            // Set initial content directly
             modalImg.src = imgElement.src;
             modalImg.alt = imgElement.alt;
-            modalTitle.textContent = details.title;
-            modalText.textContent = details.description;
+            
+            if (details) {
+                modalTitle.textContent = details.title;
+                modalText.textContent = details.description;
+            } else {
+                modalTitle.textContent = 'Error';
+                modalText.textContent = 'Content not found for: ' + imageName;
+            }
+            
+            // Also call updateSpecialModal to ensure consistency
+            updateSpecialModal();
             
             // Prevent body scrolling when modal is open
             document.body.style.overflow = 'hidden';
@@ -489,19 +524,34 @@ The 4-month intensive training program covered C, C++, Microcontrollers, and Com
             
             let currentImage, imageName, details;
             
+            console.log('updateSpecialModal called with imageSet:', currentImageSet, 'index:', currentImageIndex);
+            
             if (currentImageSet === 'srm') {
                 currentImage = srmImages[currentImageIndex];
-                imageName = currentImage.split('/').pop();
+                imageName = decodeURIComponent(currentImage.split('/').pop());
                 details = srmImageDetails[imageName];
-            } else {
+                console.log('Using SRM images:', imageName, details);
+            } else if (currentImageSet === 'special') {
                 currentImage = specialImages[currentImageIndex];
-                imageName = currentImage.split('/').pop();
+                imageName = decodeURIComponent(currentImage.split('/').pop());
                 details = specialImageDetails[imageName];
+                console.log('Using special images:', imageName, details);
+            } else {
+                // Default to special images for backward compatibility
+                currentImage = specialImages[currentImageIndex];
+                imageName = decodeURIComponent(currentImage.split('/').pop());
+                details = specialImageDetails[imageName];
+                console.log('Default to special images:', imageName, details);
             }
             
-            modalImg.src = currentImage;
-            modalTitle.textContent = details.title;
-            modalText.textContent = details.description;
+            if (details) {
+                modalImg.src = currentImage;
+                modalTitle.textContent = details.title;
+                modalText.textContent = details.description;
+            } else {
+                modalTitle.textContent = 'Error';
+                modalText.textContent = 'Content not found for: ' + imageName;
+            }
         }
 
         function openSRMModal(imgElement) {
@@ -511,7 +561,7 @@ The 4-month intensive training program covered C, C++, Microcontrollers, and Com
             const modalText = document.getElementById('specialModalText');
             
             // Find the index of the clicked image
-            const imageName = imgElement.src.split('/').pop();
+            const imageName = decodeURIComponent(imgElement.src.split('/').pop());
             currentImageIndex = srmImages.findIndex(img => img.includes(imageName));
             currentImageSet = 'srm';
             
